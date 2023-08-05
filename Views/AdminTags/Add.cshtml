@@ -1,0 +1,40 @@
+﻿<!-- step 23: create model here, which is the model for the view which is written below
+and as this model has 2 properties as Name and DisplayName, we bind them together.
+for that use tag helper asp-for
+-->
+
+@model Blog.Web.Models.ViewModels.AddTagRequest
+@{
+}
+
+<!-- step 18: Create view -->
+
+<div class="bg-secondary bg-opacity=10 py-2">
+
+    <div class="container">
+        <h1>Add new tag - Admin functionality</h1>
+    </div>
+
+</div>
+
+<!-- step 19: create form -->
+
+<div class="container py-5">
+
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" asp-for="Name" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="displayName" asp-for="DisplayName" />
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+
+</div>
